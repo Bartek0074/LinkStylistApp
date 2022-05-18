@@ -13,27 +13,32 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: row;
     font-size: 1.6rem;
     background-color: #333;
 }
 
-.wrapper {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px;
+.column-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
 }
 
-.nav {
-    /* background-color: #444; */
-    margin: 2em;
+.column-two {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 50vw;
 }
 
 .link {
     position: relative;
-    font-size: 3.2rem;
-    margin: 0 1em;
+    font-size: 3.6rem;
+    margin: 0.5em;
     text-decoration: none;
     color: white;
 }
@@ -45,39 +50,39 @@ body {
 }
 
 
-/* NAV1 LINK1 */
+/* LINK 1 */
 
-.nav-one .link-one:hover {
+.link-one:hover {
     color: var(--mainColor);
 }
 
 
-/* NAV1 LINK2 */
+/* LINK 2 */
 
-.nav-one .link-two {
+.link-two {
     border-bottom: 3px solid transparent;
 }
 
-.nav-one .link-two:hover {
+.link-two:hover {
     border-bottom-color: var(--mainColor);
     color: var(--mainColor);
 }
 
 
-/* NAV1 LINK3 */
+/* LINK 3 */
 
-.nav-one .link-three {
+.link-three {
     border-bottom: 3px solid transparent;
 }
 
-.nav-one .link-three:hover {
+.link-three:hover {
     border-bottom-color: var(--mainColor);
 }
 
 
-/* NAV1 LINK4 */
+/* LINK 4 */
 
-.nav-one .link-four::before {
+.link-four::before {
     content: '';
     position: absolute;
     left: 0;
@@ -88,15 +93,15 @@ body {
     background-color: var(--mainColor);
 }
 
-.nav-one .link-four:hover::before {
+.link-four:hover::before {
     transform: scaleX(1);
 }
 
 
-/* NAV1 LINK5 */
+/* LINK 5 */
 
-.nav-one .link-five::before,
-.nav-one .link-five::after {
+.link-five::before,
+.link-five::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -107,31 +112,31 @@ body {
     transition: transform .3s;
 }
 
-.nav-one .link-five::before {
+.link-five::before {
     left: 0;
     transform-origin: left;
 }
 
-.nav-one .link-five::after {
+.link-five::after {
     right: 0;
     transform-origin: right;
 }
 
-.nav-one .link-five:hover::before {
+.link-five:hover::before {
     transform: scaleX(1);
     transform-origin: right;
 }
 
-.nav-one .link-five:hover::after {
+.link-five:hover::after {
     transform: scaleX(1);
     transform-origin: left;
 }
 
 
-/* NAV2 LINK1 */
+/* LINK 6 */
 
-.nav-two .link-one::before,
-.nav-two .link-one::after {
+.link-six::before,
+.link-six::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -142,30 +147,30 @@ body {
     transition: transform .3s;
 }
 
-.nav-two .link-one::before {
+.link-six::before {
     left: 0;
     transform-origin: right;
 }
 
-.nav-two .link-one::after {
+.link-six::after {
     right: 0;
     transform-origin: left;
 }
 
-.nav-two .link-one:hover::before {
+.link-six:hover::before {
     transform: scaleX(1);
     transform-origin: left;
 }
 
-.nav-two .link-one:hover::after {
+.link-six:hover::after {
     transform: scaleX(1);
     transform-origin: right;
 }
 
 
-/* NAV2 LINK2 */
+/* LINK 7 */
 
-.nav-two .link-two::before {
+.link-seven::before {
     content: '';
     position: absolute;
     left: 0;
@@ -177,14 +182,14 @@ body {
     background-color: var(--mainColor);
 }
 
-.nav-two .link-two:hover::before {
+.link-seven:hover::before {
     transform: scaleX(1);
 }
 
 
-/* NAV2 LINK3 */
+/* LINK 8 */
 
-.nav-two .link-three::before {
+.link-eight::before {
     content: '';
     position: absolute;
     left: 0;
@@ -197,19 +202,19 @@ body {
     transition: transform .3s ease-in;
 }
 
-.nav-two .link-three:hover::before {
+.link-eight:hover::before {
     transform: scaleX(1);
     transform-origin: left;
 }
 
 
-/* NAV3 LINK1 */
+/* LINK 9 */
 
-.nav-three .link {
+.link-nine {
     padding: 10px 20px;
 }
 
-.nav-three .link-one:hover {
+.link-nine:hover {
     background-color: white;
     color: #333;
 }
