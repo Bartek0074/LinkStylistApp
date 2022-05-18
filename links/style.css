@@ -1,0 +1,215 @@
+:root {
+    --mainColor: gold;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: #333;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.nav {
+    /* background-color: #444; */
+    margin: 2em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link {
+    position: relative;
+    font-size: 3.2rem;
+    margin: 0 1em;
+    text-decoration: none;
+    color: white;
+}
+
+.link,
+.link::after,
+.link::before {
+    transition: .3s;
+}
+
+
+/* NAV1 LINK1 */
+
+.nav-one .link-one:hover {
+    color: var(--mainColor);
+}
+
+
+/* NAV1 LINK2 */
+
+.nav-one .link-two {
+    border-bottom: 3px solid transparent;
+}
+
+.nav-one .link-two:hover {
+    border-bottom-color: var(--mainColor);
+    color: var(--mainColor);
+}
+
+
+/* NAV1 LINK3 */
+
+.nav-one .link-three {
+    border-bottom: 3px solid transparent;
+}
+
+.nav-one .link-three:hover {
+    border-bottom-color: var(--mainColor);
+}
+
+
+/* NAV1 LINK4 */
+
+.nav-one .link-four::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    background-color: var(--mainColor);
+}
+
+.nav-one .link-four:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* NAV1 LINK5 */
+
+.nav-one .link-five::before,
+.nav-one .link-five::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 50%;
+    transform: scaleX(0);
+    background-color: var(--mainColor);
+    transition: transform .3s;
+}
+
+.nav-one .link-five::before {
+    left: 0;
+    transform-origin: left;
+}
+
+.nav-one .link-five::after {
+    right: 0;
+    transform-origin: right;
+}
+
+.nav-one .link-five:hover::before {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.nav-one .link-five:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/* NAV2 LINK1 */
+
+.nav-two .link-one::before,
+.nav-two .link-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 50%;
+    transform: scaleX(0);
+    background-color: var(--mainColor);
+    transition: transform .3s;
+}
+
+.nav-two .link-one::before {
+    left: 0;
+    transform-origin: right;
+}
+
+.nav-two .link-one::after {
+    right: 0;
+    transform-origin: left;
+}
+
+.nav-two .link-one:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-two .link-one:hover::after {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+
+/* NAV2 LINK2 */
+
+.nav-two .link-two::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    height: 3px;
+    background-color: var(--mainColor);
+}
+
+.nav-two .link-two:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* NAV2 LINK3 */
+
+.nav-two .link-three::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    height: 3px;
+    background-color: var(--mainColor);
+    transition: transform .3s ease-in;
+}
+
+.nav-two .link-three:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/* NAV3 LINK1 */
+
+.nav-three .link {
+    padding: 10px 20px;
+}
+
+.nav-three .link-one:hover {
+    background-color: white;
+    color: #333;
+}
