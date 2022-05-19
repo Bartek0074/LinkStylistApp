@@ -1,5 +1,8 @@
 :root {
-    --mainColor: gold;
+    --bgColor: #333;
+    --fontColor: white;
+    --mainColorFirst: gold;
+    --mainColorSecond: white;
 }
 
 * {
@@ -14,33 +17,77 @@ html {
 
 body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-size: 1.6rem;
-    background-color: #333;
+    background-color: var(--bgColor);
+    color: white;
+    font-family: sans-serif;
 }
 
-.column-one {
+
+/* INPUTS */
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    background-color: #333;
+    padding: 2em;
+}
+
+.inputs label {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    width: 20%;
+    min-width: 200px;
+    padding-top: 1em;
+    text-transform: uppercase;
+}
+
+.inputs input {
+    margin: 0.5em;
+    width: 100px;
+    font-size: 1.6rem;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: .25em .5em;
+}
+
+
+/* BOXES BOX */
+
+.boxes {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box {
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 50vw;
+    height: 100px;
+    width: 300px;
 }
 
-.column-two {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    width: 50vw;
-}
+
+/* LINK */
 
 .link {
     position: relative;
     font-size: 3.6rem;
     margin: 0.5em;
     text-decoration: none;
-    color: white;
+    color: var(--fontColor);
 }
 
 .link,
@@ -53,7 +100,7 @@ body {
 /* LINK 1 */
 
 .link-one:hover {
-    color: var(--mainColor);
+    color: var(--mainColorFirst);
 }
 
 
@@ -64,8 +111,8 @@ body {
 }
 
 .link-two:hover {
-    border-bottom-color: var(--mainColor);
-    color: var(--mainColor);
+    border-bottom-color: var(--mainColorFirst);
+    color: var(--mainColorFirst);
 }
 
 
@@ -76,7 +123,7 @@ body {
 }
 
 .link-three:hover {
-    border-bottom-color: var(--mainColor);
+    border-bottom-color: var(--mainColorFirst);
 }
 
 
@@ -90,7 +137,7 @@ body {
     width: 100%;
     transform: scaleX(0);
     height: 3px;
-    background-color: var(--mainColor);
+    background-color: var(--mainColorFirst);
 }
 
 .link-four:hover::before {
@@ -108,7 +155,7 @@ body {
     height: 3px;
     width: 50%;
     transform: scaleX(0);
-    background-color: var(--mainColor);
+    background-color: var(--mainColorFirst);
     transition: transform .3s;
 }
 
@@ -143,7 +190,7 @@ body {
     height: 3px;
     width: 50%;
     transform: scaleX(0);
-    background-color: var(--mainColor);
+    background-color: var(--mainColorFirst);
     transition: transform .3s;
 }
 
@@ -179,7 +226,7 @@ body {
     transform: scaleX(0);
     transform-origin: left;
     height: 3px;
-    background-color: var(--mainColor);
+    background-color: var(--mainColorFirst);
 }
 
 .link-seven:hover::before {
@@ -198,7 +245,7 @@ body {
     transform: scaleX(0);
     transform-origin: right;
     height: 3px;
-    background-color: var(--mainColor);
+    background-color: var(--mainColorFirst);
     transition: transform .3s ease-in;
 }
 
@@ -215,6 +262,182 @@ body {
 }
 
 .link-nine:hover {
-    background-color: white;
-    color: #333;
+    background-color: var(--mainColorSecond);
+    color: var(--bgColor);
+}
+
+
+/* LINK 10 */
+
+.link-ten {
+    padding: 10px 20px;
+    z-index: 0
+}
+
+.link-ten::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: scaleY(0);
+    background-color: var(--mainColorSecond);
+    z-index: -1;
+}
+
+.link-ten:hover::before {
+    transform: scaleY(1);
+}
+
+.link-ten:hover {
+    color: var(--bgColor);
+}
+
+
+/* LINK 11 */
+
+.link-eleven {
+    padding: 10px 20px;
+    z-index: 0
+}
+
+.link-eleven::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    background-color: var(--mainColorSecond);
+    z-index: -1;
+}
+
+.link-eleven:hover::before {
+    transform: scaleY(1);
+}
+
+.link-eleven:hover {
+    color: var(--bgColor);
+}
+
+
+/* LINK 12 */
+
+.link-twelve {
+    padding: 10px 20px;
+    z-index: 0
+}
+
+.link-twelve::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    background-color: var(--mainColorSecond);
+    z-index: -1;
+    transition: transform .3s;
+}
+
+.link-twelve:hover::before {
+    transform-origin: bottom;
+    transform: scaleY(1);
+}
+
+.link-twelve:hover {
+    color: var(--bgColor);
+}
+
+
+/* LINK 13 */
+
+.link-thirteen {
+    padding: 10px 20px;
+    z-index: 0
+}
+
+.link-thirteen::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: scaleX(0);
+    background-color: var(--mainColorSecond);
+    z-index: -1;
+}
+
+.link-thirteen:hover::before {
+    transform: scaleX(1);
+}
+
+.link-thirteen:hover {
+    color: var(--bgColor);
+}
+
+
+/* LINK 14 */
+
+.link-fourteen {
+    padding: 10px 20px;
+    z-index: 0
+}
+
+.link-fourteen::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: var(--mainColorSecond);
+    z-index: -1;
+}
+
+.link-fourteen:hover::before {
+    transform: scaleX(1);
+}
+
+.link-fourteen:hover {
+    color: var(--bgColor);
+}
+
+
+/* LINK 15 */
+
+.link-fifteen {
+    padding: 10px 20px;
+    z-index: 0
+}
+
+.link-fifteen::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    background-color: var(--mainColorSecond);
+    z-index: -1;
+    transition: transform .3s;
+}
+
+.link-fifteen:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.link-fifteen:hover {
+    color: var(--bgColor);
 }
